@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script  type="text/javascript"  src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript">
+
+
+    $(document).ready(function()
+    {
+        //1
+        $("#btn1").click(function()
+        {
+            
+            $("#image").fadeToggle("slow");
+            //alert("here");
+        });
+        
+        //2
+        $("#btn2").click(function()
+        {
+            //$("#main").showMessage({thisMessage: ['This message is displayed on pressing the button']});
+        $("p").text("This message is displayed on pressing the button");
+        });
+        
+        //3
+        $("#btn3").click(function()
+        {
+            $("#main").css("background-color","lightgreen");
+        });
+
+        //5
+        $(window).scroll( function(){
+                $('.fadein').each( function(i){
+                
+                var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                
+                if( bottom_of_window > bottom_of_element ){
+                    $(this).animate({'opacity':'1'},1000);
+                }
+                
+            }); 
+        });
+
+        //6
+        $("p").hover(function()
+        {
+            $(this).addClass("newclass");
+        });
+
+        //7
+        $("#btn4").click(function(){
+            $("#addmodal").addClass("modal");
+            $("#addmodalcontent").addClass("modal-content");
+        });
+
+       
+
+    });
+    </script>
+    <style>
+    .fadein{
+        opacity:0;
+    }
+    .newclass{
+        font-size: larger;
+    }
+    .modal{
+        display: flex;
+        position: fixed;
+        z-index: 1;
+        background-color: (0,0,0,0.4);
+    }
+    .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 80%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+    #addmodalcontent{
+        visibility: hidden;
+    }
+    </style>
+</head>
+
+<body>
+    <img class="fadein" src="Rung welcome.png" height="200px" width="200px">
+    <div id="main" style="height: 70vh; width: 70vh; background-color:coral;">
+        <img  id="image" src="Rung welcome.png" height="300px" width="300px">
+        <br>
+        <button id="btn1">Toggle</button>
+        <button id="btn2">Display Message</button>
+        <button id="btn3">Change color</button>
+        <button id="btn4">Modal window</button>
+        <p></p>
+        
+        <div id="addmodal">
+
+            <div  id="addmodalcontent" >here is the modal window</div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!--
+    4. Write a script that will display an alert message when the user tries to submit a form without filling out all required fields.
+    7. Write a script that will display a modal window when the user clicks on a button.
+    8. Create a function that will sort a list of items alphabetically when a button is clicked.
+    9. Write a script that will display a tooltip when the user hovers over an element.
+-->

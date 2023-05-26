@@ -1,0 +1,84 @@
+.main{
+    background-color: white;
+
+    display: flex;
+    align-items: stretch;
+
+    border: 2px solid black;
+
+    height: 100vh;
+
+    margin: 0.2% 0.2% 0.2% 0.2%;
+
+
+}
+.child1{
+    border: 2px solid grey;
+    background-color: lightskyblue;
+
+    position:absolute;
+    display:block;
+
+    height: 60vh;
+    width: 60vh;
+
+    top:20%;
+    left:35%;
+
+    
+}
+.header{
+    border: 2px solid white;
+    color: lightskyblue;
+
+    position: static;
+    
+    margin: 0.3% 0.3% 0.3% 0.3%;
+    padding-bottom: 2%;
+    padding-top: 1% ;
+}
+.post{
+    
+    background-color: white;
+
+    position: relative;
+    justify-content: center;
+
+}
+.post-start{
+    border: 2px solid white;
+    justify-content: center;
+}
+.post-bottom{
+    border: 2px solid lightskyblue;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+
+    padding-left: 25%;
+    padding-right: 25%;
+
+    justify-content: center;
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.image{
+    border: 2px solid lightskyblue;
+    background-color: lightskyblue;
+    position: relative;
+    justify-content:center;
+
+    padding-left: 3%;
+    padding-right: 3%;
+
+}
+input{
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+}
+

@@ -1,0 +1,86 @@
+<!--
+    <meta name="viewport" content="width=device-width, inital-scal=1.0"
+    <script typ="text/javascript" src="something.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+-->
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Stylesheet_2.css">
+        <script  type="text/javascript"  src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#btn1').click(function(){
+                    
+                    var url = "https://randomuser.me/api/";
+
+                    $.get(url,function(data){
+                        
+                        console.log(data);
+                        
+
+                        $('#name').text("Name:" + data.results[0].name.title +" "+ data.results[0].name.first + " " + data.results[0].name.last);
+                        $('#image').attr ('src',data.results[0].picture.large);
+                        $('#gender').text("Gender:  " + data.results[0].gender );   
+                        $('#location').text("Location:  " + data.results[0].location.street.name +" " + data.results[0].location.street.number +" "+ data.results[0].location.city + " " + data.results[0].location.state  + " " + data.results[0].location.country) +  + " " + data.results[0].location.postcode;
+                        $('#web_pages').text("Cell:  " + data.results[0].cell);
+                        $('#email').text("Email:  " + data.results[0].email);
+                        $('#phone').text("Phone:  " + data.results[0].phone);
+                        $('#dob').text("DOB:  " + data.results[0].dob.date + " " + data.results[0].dob.age);            
+                        
+                    });
+                    
+                    
+                    
+                });
+                
+            });
+        </script>
+    </head>
+    <body>
+        <button id="btn1" > Generate a User</button>
+        <div id="div1">Here are the details of the User:</div>
+        <div id="div2">
+            <div id="name_image">
+                <div id="name"></div>
+                <img id = "image">
+            </div>
+            <hr>
+            <div id="gender"></div>
+            <hr>
+            <div id="location"></div>
+            <div id="cell"></div>
+            <hr>
+            <div id="email"></div>
+            <hr>
+            <div id="phone"></div>
+            <hr>
+            <div id="dob"></div>
+            
+        </div>
+    </body>
+</html>
+
+<!--
+    
+
+
+gender
+: 
+"male"
+
+picture
+: 
+{large: 'https://randomuser.me/api/portraits/men/9.jpg', medium: 'https://randomuser.me/api/portraits/med/men/9.jpg', thumbnail: 'https://randomuser.me/api/portraits/thumb/men/9.jpg'}
+
+                       $('#heading').text("University Name:\n" + data[0].name);
+                        $('#country').text("Country:  " + data[0].country);
+                        $('#web_pages').text("Website:  " + data[0].web_pages);
+
+                    const obj = JSON.parse(list);
+                    for(var key in list){
+                        console.log(obj[key].name);
+                    }
+-->

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+        <script>
+            function changebgclr(){
+                document.getElementById("p1").style.backgroundColor= "lightgreen";
+                return true;
+            }
+            function toggleincrease_decrease_width()
+            {
+                var obj = document.getElementById("p1");
+                if(obj.style.height == "500px" && obj.style.width == "500px")
+                {
+                    obj.style.height = "250px";
+                    obj.style.width = "250px";
+                }
+                else if(obj.style.height == "250px" && obj.style.width == "250px")
+                {
+                    obj.style.height = "500px";
+                    obj.style.width = "500px";
+                }
+            }
+        </script>
+        <style>
+            #p1{
+                border: 2px solid black;
+                width: 500px;
+                height: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="p1">hello</p>
+        <button onclick="return changebgclr()">Change Color</button>
+        <button onclick="return toggleincrease_decrease_width()">Change width and Height</button>
+
+    </body>
+</html>
+
+<!--
+    @media-screen(max-width:500px){
+
+    }
+    @mdia only screem and (mx-width)
+-->

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+        <script>
+            function validate(){
+                alert("hello");
+                var  name_obj = document.getElementById("#name");
+                alert( document.getElementById("#name"));
+                if(name_obj.innerHTML == ' ' )
+                {
+                    alert("name cannot be empty!");
+                    return false;
+                    
+                }
+                if(name_obj.textContent > 20)
+                {
+                    while(name_obj.textContent > 20)
+                        alert("name should not be greater than 20 characters!");
+                }
+
+                if(document.getElementById('#email').nodeValue == ' ' )
+                {
+                    alert("email cannot be empty!");
+                    return false;
+                }
+
+                if(document.getElementById('#ph_no').textContent == ' ' )
+                {
+                    alert("phone number cannot be empty!");
+                    return false;
+                }
+
+                var msg_obj = document.getElementById('#msg');
+                if(msg_obj.textContent == ' ' )
+                {
+                    alert("message cannot be empty!");
+                    return false;
+                }
+                if(msg_obj.textContent < 2 ||  msg_obj.textContent > 7)
+                {
+                    while(msg_obj.textContent < 2 ||  msg_obj.textContent > 7)
+                        alert("minimum 2 words and maximum 7 words are allowed in a msg.");
+                }
+
+                return true;
+            }
+            
+        </script>
+        <style>
+        </style>
+    </head>
+    <body>
+                <label for="name">Name</label>
+                <input id="name" class="right" type="text">
+                <br>    
+                <label for="email">Email</label>
+                <input id="email" class="right" type="text">
+                <br>
+                <label for="ph_no">Ph No:</label>
+                <input id="ph_no" class="right" placeholder="0000000" type="number">
+                <br>
+                <label for="msg">Message</label>
+                <input id="msg" class="right" type="text">
+
+                <button onclick="return validate()">Submit</button>
+           
+    </body>
+</html>
+
+<!--
+    @media-screen(max-width:500px){
+
+    }
+    @mdia only screem and (mx-width)
+-->

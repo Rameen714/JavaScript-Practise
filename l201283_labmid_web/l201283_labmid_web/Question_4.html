@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+        <link rel="stylesheet" href="stylesheet_one.css" media="(max-width:600px)">
+        <script type="text/javascript" src="javascript_one.js"></script>
+        <script>
+            function calculate_age(){
+                
+            }
+            
+        </script>
+        <style>
+            #one, #two, #three, #four, #five, #six, #seven, #eight, #nine{
+                height: 50%;
+                width: 50%;
+                border: 3px solid black;
+            }
+            #main{
+               display: grid;
+               grid-template-areas: "one two three" 
+                                    "four five six"
+                                    "seven eight nine";
+               grid-template-rows: "0.3fr 0.3fr 0.3fr";
+               grid-template-columns: "0.3fr 0.3fr 0.3fr";
+               height: 100vh;
+            
+            }
+            #one{
+                grid-area: one;
+
+            }
+            #two{
+                grid-area: two;
+
+            }
+            #three{
+                grid-area: three;
+
+            }
+            #four{
+                grid-area: four;
+
+            }
+            #five{
+                grid-area: five;
+
+            }
+            #six{
+                grid-area: six;
+
+            }
+            #seven{
+                grid-area: seven;
+
+            }
+            #eight{
+                grid-area: eight;
+
+            }
+            #nine{
+                grid-area: nine;
+
+            }
+            .top{
+                justify-content: first baseline;
+            }
+            .middle{
+                justify-content: center;
+            }
+            .last{
+                align-content: baseline;
+            }
+            .left{
+                text-align: left;
+            }
+            .right{
+                text-align: right;
+            }
+            .center{
+                text-align: center;
+                justify-content:space-around;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="one" class="top" class="left">1</div>
+            <div id="two" class="top" class="center">2</div>
+            <div id="three" class="top" class="right">3</div>
+            <div id="four" class="middle" class="left">4</div>
+            <div id="five" class="middle" class="center">5</div>
+            <div id="six" class="middle" class="right">6</div>
+            <div id="seven" class="last" class="left">7</div>
+            <div id="eight" class="last" class="center">8</div>
+            <div id="nine" class="last" class="right">9</div>
+
+        </div>
+    </body>
+</html>
+
+<!--
+    @media-screen(max-width:500px){
+
+    }
+    @mdia only screem and (mx-width)
+-->
